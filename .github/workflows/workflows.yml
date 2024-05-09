@@ -12,8 +12,10 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'  
+          python-version: '3.x'
+      - name: Install fastapi
+        run: pip install fastapi
       - name: Install dependencies
-        run: pip install pytest  
+        run: pip install pytest
       - name: Run tests
         run: pytest  
